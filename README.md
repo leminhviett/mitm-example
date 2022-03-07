@@ -1,3 +1,7 @@
+# Scenario set up
+- Start pod server: `kubectl run server-mitm --image=viet009/server-mitm:0.01`
+- Start pod client: `kubectl run client-mitm --image=viet009/client-mitm:0.01 --env="IP={server-internal-ip}" --env="PORT=8000"`
+
 # Victim description
 
 -   `Client` will send to `server` periodically a secret message. Our job is to capture what is that secret
